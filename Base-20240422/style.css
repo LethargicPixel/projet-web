@@ -11,3 +11,12 @@ p{
 span{
     font-style: italic;
 }
+
+body{
+    width: 80%;
+    max-width: 1200px;
+    min-width: 800px;
+    align-self: center;
+    background-color: rgb(219, 219, 105);
+    margin: auto;
+}
