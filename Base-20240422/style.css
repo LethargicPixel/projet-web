@@ -20,3 +20,31 @@ body{
     background-color: rgb(219, 219, 105);
     margin: auto;
 }
+
+
+#img_hdv{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+figcaption{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td,th{
+    border: 1px solid black;
+}
