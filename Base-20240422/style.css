@@ -55,3 +55,10 @@ iframe{
     height: 600px;
     margin: auto;
 }
+
+#img_logo{
+    height: 100px;
+    top: 1%;
+    right: 1%;
+    position: fixed;
+}
