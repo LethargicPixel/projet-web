@@ -116,3 +116,22 @@ h2{
 .titre:hover{
     cursor: pointer;
 }
+
+#tout_input{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.div_input{
+    display: flex;
+}
+label {
+    width: 13ch;
+    display: flex;
+    justify-content: right;
+}
+.asterisque{
+    color: red;
+}
+
