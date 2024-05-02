@@ -94,10 +94,21 @@ nav{
     text-decoration: none;
     color: black;
 }
+
 #menu>li>a:hover{
     background-color: white;
 }
 
 hr{
     border: 1px solid;
+}
+
+h2::before{
+    content: url("/data/img/Blason_Limoges_icone.png");
+    padding: 10px;
+}
+
+h2{
+    display: flex;
+    align-items: center;
 }
