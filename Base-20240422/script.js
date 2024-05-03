@@ -1,4 +1,4 @@
-//question 1
+/*-----------------question 1-----------------*/
 let titres=document.getElementsByClassName("titre");
 
 function cacherSection(event){
@@ -40,4 +40,27 @@ for (let i=0;i<titres.length;i++) {
     
     titres[i].addEventListener("click",cacherSection)
 }
+
+/*-----------------question 2-----------------*/
+
+let boutonsEnvoyer=document.getElementById("envoyer")
+let inputNom=document.getElementById("text_nom")
+let inputPrenom=document.getElementById("text_prenom")
+
+
+
+boutonsEnvoyer.addEventListener("click",function(event){
+    let nom=inputNom.value
+    let prenom=inputPrenom.value
+
+    if (nom.length!=0 && prenom.length!=0){//pour maintenir le suspens
+        event.preventDefault()
+        console.log(document.getElementById("text_nom").value.length)
+        
+        
+        alert(`Désolé ${nom} ${prenom}, je n’ai que faire de ton commentaire, je ne l’enverrai pas !`)
+        //chaine de caractere delimité par des accent grave plutot que des guillemets pour inclure des variable
+    }
+})
+
 
