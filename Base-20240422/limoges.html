@@ -5,15 +5,13 @@
     <meta charset="utf-8" />
     <title>Limoges - 87</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
     <header id="entete">
       <a href="https://www.limoges.fr/" target="_blank"><img src="./data/img/Logo_Limoges.png" alt="logo Limoges" id="img_logo"></a>
-      <h1>
-        Limoges
-      </h1>
+      <h1>Limoges</h1>
       <p>
         Ce contenu de cette page est tiré de l'article Limoges de Wikipédia en français
         (<a href="https://fr.wikipedia.org/wiki/Limoges">https://fr.wikipedia.org/wiki/Limoges</a>).
@@ -39,9 +37,7 @@
     <!-- ===================================================================================== -->
 
     <section id="section_introduction">
-      <h2 class="titre">
-        Introduction
-      </h2>
+      <h2 class="titre">Introduction</h2>
       <!---->
       <p>
         Limoges (en occitan : <span>Limòtges</span>) est une commune en Nouvelle-Aquitaine située dans le Grand Sud-Ouest de la France,
@@ -54,8 +50,11 @@
       </figure>
 
       <table>
+        <caption>Quelques données sur Limoges</caption>
         <thead>
-          <th colspan="3">Limoges</th>
+          <tr>
+            <th colspan="3">Limoges</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -94,21 +93,21 @@
           </tr>
         
           <tr>
-            <td colspan="3">demographie</td>
+            <td colspan="3">Démographie</td>
           </tr>
           
           <tr>
-            <td rowspan="3">population (2021)</td>
+            <td rowspan="2">Population (2021)</td>
             <td>Municipale</td>
             <td>129 570 hab</td>
           </tr>
           <tr>
-            <td>agglomération</td>
+            <td>Agglomération</td>
             <td>185 703 hab</td>
           </tr>
 
         </tbody>
-        <caption>Quelques données sur Limoges</caption>
+        
       </table>
       <!---->
       <p>
@@ -126,15 +125,11 @@
 
     <!-- ===================================================================================== -->
     <section id="section_geographie">
-      <h2 class="titre">
-        Géographie
-      </h2>
+      <h2 class="titre">Géographie</h2>
       
       <!-- ======================================================== -->
       <div id="div_localisation">
-        <h3>
-          Localisation
-        </h3>
+        <h3>Localisation</h3>
       
         <!---->
         <p>
@@ -160,9 +155,7 @@
       </div>
       <!-- ======================================================== -->
       <div id="div_geologie_et_relief">
-        <h3>
-          Géologie et relief
-        </h3>
+        <h3>Géologie et relief</h3>
       
         <!---->
         <p>
@@ -193,9 +186,7 @@
       </div>
       <!-- ======================================================== -->
       <div id="div_hydrographie">
-        <h3>
-          Hydrographie
-        </h3>
+        <h3>Hydrographie</h3>
       
         <!---->
         <!---->
@@ -220,9 +211,7 @@
       </div>
       <!-- ======================================================== -->
       <div id="div_climat">
-        <h3>
-          Climat
-        </h3>
+        <h3>Climat</h3>
       
         <!---->
         <p>
@@ -274,9 +263,7 @@
     <!-- ===================================================================================== -->
     <section id="section_urbanisme">
   
-      <h2 class="titre">
-        Urbanisme
-      </h2>
+      <h2 class="titre">Urbanisme</h2>
   
       <!-- ======================================================== -->
   
@@ -328,19 +315,19 @@
       <form action="mailto:matheo.lopes@etu.unilim.fr" enctype="text/plain" method="post">
         <div id="tout_input">
           <div class="div_input">
-            <label for="nom">Nom<span class="asterisque">*</span> :</label>
+            <label for="text_nom">Nom<span class="asterisque">*</span> :</label>
             <input class="input" type="text" name="nom" id="text_nom" required>
           </div>
 
           <div class="div_input">
   
-            <label for="prenom">Prenom<span class="asterisque">*</span> :</label>
+            <label for="text_prenom">Prenom<span class="asterisque">*</span> :</label>
             <input class="input" type="text" name="prenom" id="text_prenom" required>
           </div>
 
           <div class="div_input">
   
-            <label for="commentaire">Commentaire<span class="asterisque">*</span> :</label>
+            <label for="text_commentaire">Commentaire<span class="asterisque">*</span> :</label>
             <textarea class="input" name="commentaire" id="text_commentaire" cols="50" rows="4" required></textarea>
   
           </div>
