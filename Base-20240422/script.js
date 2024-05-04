@@ -63,4 +63,37 @@ boutonsEnvoyer.addEventListener("click",function(event){
     }
 })
 
+/*-----------------question 3-----------------*/
 
+let liste_lien=[
+    "data/img/gallery/1_Limoges_Hotel_de_Ville.jpg",
+    "data/img/gallery/2_Limoges_Cour_du_Temple.jpg",
+    "data/img/gallery/3_Limoges_Gare_Benedictins.jpg",
+    "data/img/gallery/4_Limoges_Halles_Centrales.jpg",
+    "data/img/gallery/5_Limoges_Pont_St_Martial.jpg",
+    "data/img/gallery/6_Limoges_Rue_de_la_Boucherie.jpg",
+    "data/img/gallery/7_Cela_pourrait_etre_quoi.png"
+]
+
+let liste_legende=[
+    "Hôtel de ville de Limoges",
+    "Cours du temple",
+    "Gare des Bénédictins",
+    "Halles Centrales de Limoges",
+    "Pont Saint-Martial",
+    "Rue de la boucherie",
+    "Aucun rapport avec Limoges mais il en fallait bien une !"
+]
+
+let image_intro=document.getElementById("image_intro")
+let compteur_image=1
+
+setInterval(function(){
+    image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
+    image_intro.lastElementChild.innerHTML=liste_legende[compteur_image]
+    compteur_image+=1
+
+    if (compteur_image==liste_lien.length){
+        compteur_image%=liste_lien.length
+    }
+},3000)
