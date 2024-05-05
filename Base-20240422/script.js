@@ -87,13 +87,23 @@ let liste_legende=[
 
 let image_intro=document.getElementById("image_intro")
 let compteur_image=1
+let taille_image_intro=parseInt(getComputedStyle(image_intro).width)
+
+
 
 setInterval(function(){
     image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
     image_intro.lastElementChild.innerHTML=liste_legende[compteur_image]
+    
     compteur_image+=1
+    image_intro.animate([{clipPath:"inset(0 0 0 0)"},{clipPath:"inset(0 0 0 100%)"}],{duration: 2000})
+    image_intro.animate([{transform:`translateX(-${parseInt(getComputedStyle(image_intro).width)}px)`}],{duration:2000})
 
     if (compteur_image==liste_lien.length){
         compteur_image%=liste_lien.length
     }
+    
 },3000)
+
+
+

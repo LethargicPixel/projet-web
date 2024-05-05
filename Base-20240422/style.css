@@ -36,6 +36,7 @@ figure{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    clip-path: fill-box;
 }
 figcaption{
     display: flex;
