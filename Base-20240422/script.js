@@ -88,7 +88,10 @@ let liste_legende=[
 let image_intro=document.getElementById("image_intro")
 let compteur_image=1
 let taille_image_intro=parseInt(getComputedStyle(image_intro).width)
-
+let image_intro_suivante=image_intro.cloneNode(true)
+let figure=document.querySelector("figure")
+let div_image_intro=document.getElementById("div_image_intro")
+div_image_intro.appendChild(image_intro_suivante)
 
 
 setInterval(function(){
@@ -97,13 +100,21 @@ setInterval(function(){
     
     compteur_image+=1
     image_intro.animate([{clipPath:"inset(0 0 0 0)"},{clipPath:"inset(0 0 0 100%)"}],{duration: 2000})
-    image_intro.animate([{transform:`translateX(-${parseInt(getComputedStyle(image_intro).width)}px)`}],{duration:2000})
+    image_intro.animate([{transform:`translateX(-${taille_image_intro}px)`}],{duration:2000})
 
     if (compteur_image==liste_lien.length){
         compteur_image%=liste_lien.length
     }
+
+    image_intro_suivante.firstElementChild.setAttribute("src",liste_lien[compteur_image])
+    image_intro_suivante.lastElementChild.innerHTML=liste_legende[compteur_image]
+
+    
+    
+    image_intro_suivante.animate([{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0 0 0)"}],{duration: 2000})
+    image_intro_suivante.animate([{transform:`translateX(${image_intro.offsetLeft+taille_image_intro}px)`},{transform:`translateX(${image_intro.offsetLeft}px)`}],{duration:2000})
+
+   
+    
     
 },3000)
-
-
-

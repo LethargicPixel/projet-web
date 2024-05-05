@@ -141,3 +141,6 @@ label {
     transform: rotate(90deg);
 }
 
+#div_image_intro{
+    display: inline-block;
+}
