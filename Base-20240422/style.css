@@ -37,6 +37,9 @@ figure{
     align-content: center;
     justify-content: center;
     clip-path: fill-box;
+    flex-direction: column;
+    margin: 0;
+    
 }
 figcaption{
     display: flex;
@@ -61,18 +64,18 @@ iframe{
     margin: auto;
 }
 
+
+
+img{
+    z-index: -2;
+}
 #img_logo{
     height: 100px;
     top: 1%;
     right: 1%;
     position: fixed;
-    z-index: -1;
+    z-index: 0;
 }
-
-img{
-    z-index: -2;
-}
-
 #menu{
     display: flex;
     list-style-type: none;
@@ -142,5 +145,6 @@ label {
 }
 
 #div_image_intro{
-    display: inline-block;
+    display: flex;
+    overflow: hidden;
 }

@@ -86,34 +86,55 @@ let liste_legende=[
 ]
 
 let image_intro=document.getElementById("image_intro")
-let compteur_image=1
+let compteur_image=0
 let taille_image_intro=parseInt(getComputedStyle(image_intro).width)
 let image_intro_suivante=image_intro.cloneNode(true)
 let figure=document.querySelector("figure")
 let div_image_intro=document.getElementById("div_image_intro")
-div_image_intro.appendChild(image_intro_suivante)
 
+
+
+image_intro_suivante.setAttribute("id","image_intro_suivant")
+image_intro_suivante.style.clipPath="inset(0 100% 0 0)"
+div_image_intro.appendChild(image_intro_suivante)
+div_image_intro.style.height=getComputedStyle(image_intro).height
+div_image_intro.style.width=`${taille_image_intro}px`
+
+
+let duree_animation=500
 
 setInterval(function(){
-    image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
+    taille_image_intro=parseInt(getComputedStyle(image_intro).width)
+
+    
+ image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
     image_intro.lastElementChild.innerHTML=liste_legende[compteur_image]
+
+    image_intro.animate([{clipPath:"inset(0 0 0 0)"},{clipPath:"inset(0 0 0 100%)"}],{duration: duree_animation})
+    image_intro.animate([{transform:`translateX(0px)`},{transform:`translateX(-${taille_image_intro}px)`}],{duration:duree_animation})
+    image_intro.style.clipPath="inset(0 0 0 100%)"
+    image_intro.style.transform=`translateX(-${taille_image_intro}px)`
     
     compteur_image+=1
-    image_intro.animate([{clipPath:"inset(0 0 0 0)"},{clipPath:"inset(0 0 0 100%)"}],{duration: 2000})
-    image_intro.animate([{transform:`translateX(-${taille_image_intro}px)`}],{duration:2000})
-
     if (compteur_image==liste_lien.length){
         compteur_image%=liste_lien.length
     }
 
-    image_intro_suivante.firstElementChild.setAttribute("src",liste_lien[compteur_image])
+image_intro_suivante.firstElementChild.setAttribute("src",liste_lien[compteur_image])
     image_intro_suivante.lastElementChild.innerHTML=liste_legende[compteur_image]
+   
 
+    image_intro_suivante.animate([{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0 0 0)"}],{duration: duree_animation})
+    image_intro_suivante.animate([{transform:`translateX(0px)`},{transform:`translateX(-${taille_image_intro}px)`}],{duration:duree_animation})
+
+    image_intro_suivante.style.clipPath="inset(0 0 0 0)"
+    image_intro_suivante.style.transform=`translateX(-${taille_image_intro}px)`
     
     
-    image_intro_suivante.animate([{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0 0 0)"}],{duration: 2000})
-    image_intro_suivante.animate([{transform:`translateX(${image_intro.offsetLeft+taille_image_intro}px)`},{transform:`translateX(${image_intro.offsetLeft}px)`}],{duration:2000})
 
+    
+
+    
    
     
     
