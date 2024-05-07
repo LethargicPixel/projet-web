@@ -106,7 +106,7 @@ image_intro_suivante.style.clipPath="inset(0 100% 0 0)";
 div_image_intro.appendChild(image_intro_suivante);
 div_image_intro.style.height=getComputedStyle(image_intro).height;
 div_image_intro.style.width=`${taille_image_intro+100}px`;
-div_image_intro.style.minWidth=`${taille_image_intro+1000}px`;
+//div_image_intro.style.minWidth=`${taille_image_intro+100}px`;
 
 
 let duree_animation=300;
