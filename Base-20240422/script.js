@@ -23,8 +23,14 @@ function cacherSection(event){
     else{
         titre.setAttribute("value",0)
         for (i=1;i<enfant_section.length;i++){
+            if (enfant_section[i].getAttribute("id")=="div_image_intro"){
+                enfant_section[i].style.display="flex"
+
+            }else{
+                enfant_section[i].style.display="contents"
+            }
             
-            enfant_section[i].style.display="contents"
+           
         }
         animationFleche=titre.lastChild.animate([{transform:"rotate(90deg)"}],{duration: 200})
         animationFleche.onfinish=function(){
@@ -108,7 +114,7 @@ setInterval(function(){
     taille_image_intro=parseInt(getComputedStyle(image_intro).width)
 
     
- image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
+    image_intro.firstElementChild.setAttribute("src",liste_lien[compteur_image])
     image_intro.lastElementChild.innerHTML=liste_legende[compteur_image]
 
     image_intro.animate([{clipPath:"inset(0 0 0 0)"},{clipPath:"inset(0 0 0 100%)"}],{duration: duree_animation})
@@ -130,8 +136,18 @@ setInterval(function(){
 
     image_intro_suivante.style.clipPath="inset(0 0 0 0)"
     image_intro_suivante.style.transform=`translateX(-${taille_image_intro}px)`
-    
-    
+    /*
+    if(compteur_image==liste_lien.length-2){
+        image_intro.style.cursor="pointer"
+    }else{
+        image_intro.style.cursor="default"
+    }
+*/
+    if(compteur_image==liste_lien.length-1){
+        image_intro_suivante.style.cursor="pointer"
+    }else{
+        image_intro_suivante.style.cursor="default"
+    }
 
     
 

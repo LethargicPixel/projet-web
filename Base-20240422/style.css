@@ -1,6 +1,8 @@
 *{
     scroll-behavior: smooth;
+    
 }
+
 
 h1{
     text-align: center;
@@ -36,7 +38,7 @@ figure{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    clip-path: fill-box;
+   
     flex-direction: column;
     margin: 0;
     
@@ -74,7 +76,7 @@ img{
     top: 1%;
     right: 1%;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
 }
 #menu{
     display: flex;
