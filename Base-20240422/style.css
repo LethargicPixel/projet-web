@@ -1,23 +1,18 @@
-*{
-    scroll-behavior: smooth;
-    
-}
-
-
 h1{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 64px;
 }
+/*---------------------------------------------question 1--------------------------------------------*/
 
 p{
     text-align: justify;
 }
-
+/*---------------------------------------------question 2--------------------------------------------*/
 span{
     font-style: italic;
 }
-
+/*---------------------------------------------question 3--------------------------------------------*/
 body{
     width: 80%;
     max-width: 1200px;
@@ -26,58 +21,31 @@ body{
     background-color: rgb(219, 219, 105);
     margin: auto;
 }
-
+/*---------------------------------------------question 4--------------------------------------------*/
 
 #img_hdv{
     display: flex;
     justify-content: center;
     width: 800px;
 }
-figure{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-   
-    flex-direction: column;
-    margin: 0;
-    
-}
-figcaption{
-    display: flex;
-    justify-content: center;
-}
-
-
-
-table{
-    border-collapse: collapse;
-    border: 1px solid black;
-}
-
-td,th{
-    border: 1px solid black;
-}
-
+/*---------------------------------------------question 5--------------------------------------------*/
 iframe{
     display: block;
     width: 800px;
     height: 600px;
     margin: auto;
 }
+/*---------------------------------------------question 6--------------------------------------------*/
 
-
-
-img{
-    z-index: -2;
-}
 #img_logo{
     height: 100px;
     top: 1%;
     right: 1%;
     position: fixed;
-    z-index: -1;
+    z-index: -1;/*pour ne pas recouvrir le texte*/
 }
+/*---------------------------------------------question 7--------------------------------------------*/
+
 #menu{
     display: flex;
     list-style-type: none;
@@ -85,29 +53,22 @@ img{
 }
 
 nav{
-    position: sticky;
+    position: sticky;/*pour que ça reste en haut au defilement*/
     top: 0;
-    z-index: 2;
+    z-index: 2;/*pour passer devant la figure*/
     padding-top: 10px;
 }
 
 #menu>li>a{
     border: solid;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px;/*l'arrondi*/
     border-color: black;
-    background-color: rgb(219, 219, 105);
-    text-decoration: none;
+    background-color: rgb(219, 219, 105);/*meme couleur que le fond du site*/
+    text-decoration: none;/*enleve le souslignement*/
     color: black;
 }
-
-#menu>li>a:hover{
-    background-color: white;
-}
-
-hr{
-    border: 1px solid;
-}
+/*---------------------------------------------question 8--------------------------------------------*/
 
 h2::before{
     content: url("/data/img/Blason_Limoges_icone.png");
@@ -118,28 +79,59 @@ h2{
     display: flex;
     align-items: center;
 }
+/*---------------------------------------------question 9--------------------------------------------*/
+
 
 .titre:hover{
     cursor: pointer;
 }
+/*---------------------------------------------question 10-------------------------------------------*/
 
 #tout_input{
     display: flex;
     justify-items: center;
     flex-direction: column;
 }
-
+.asterisque{
+    color: red;
+}
 .div_input{
     display: flex;
 }
+
 label {
     width: 13ch;
     display: flex;
     justify-content: right;
 }
-.asterisque{
-    color: red;
+/*---------------------------------------------question 11-------------------------------------------*/
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
 }
+
+td,th{
+    border: 1px solid black;
+}
+
+img{
+    z-index: -2;
+}
+
+#menu>li>a:hover{
+    background-color: white;
+}
+
+hr{
+    border: 1px solid;
+}
+*{
+    scroll-behavior: smooth;
+    
+}
+
+/*---------------------------------------------question 12-------------------------------------------*/
 
 .fleche{
     font-style: normal;
@@ -150,3 +142,21 @@ label {
     display: flex;
     overflow: hidden;
 }
+
+
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+   
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+figcaption{
+    display: flex;
+    justify-content: center;
+}
+/*---------------------------------------------pour le js--------------------------------------------*/
