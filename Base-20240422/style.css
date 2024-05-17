@@ -114,12 +114,15 @@ td,th{
     border: 1px solid black;
 }
 
-img{
-    z-index: -2;
-}
 
 #menu>li>a:hover{
     background-color: white;
+    transition: all 2s ease-out;
+}
+
+#menu>li>a{
+   
+    animation: all 1s ease-out;
 }
 
 hr{
