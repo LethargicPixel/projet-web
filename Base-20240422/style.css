@@ -89,7 +89,6 @@ h2{
 
 #tout_input{
     display: flex;
-    justify-items: center;
     flex-direction: column;
 }
 .asterisque{
